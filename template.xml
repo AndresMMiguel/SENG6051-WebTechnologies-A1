@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE category [
+<!ELEMENT category (name, description, subject, grade, tags*, cost?,equipment+,reviews*,picture+,url
+,duration?, difficulty?, numPlayers)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT description (#PCDATA)>
+	<!ELEMENT subject (#PCDATA)>
+	<!ELEMENT grade (#PCDATA)>
+	<!ELEMENT tags (#PCDATA)>
+	<!ELEMENT cost (#PCDATA)>
+	<!ELEMENT equipment (eqName, addCost)>
+		<!ELEMENT eqName (#PCDATA)>
+		<!ELEMENT addCost (#PCDATA)>
+			<!ATTLIST addCost costAttr (additional|included) #REQUIRED>
+	<!ELEMENT reviews (#PCDATA)>
+		<!ATTLIST reviews score (0|1|3|4|5) #REQUIRED>
+	<!ELEMENT picture (#PCDATA)>
+	<!ELEMENT url (#PCDATA)>
+	<!ELEMENT duration (#PCDATA)> <!-- Estimated time duration -->
+	<!ELEMENT difficulty (#PCDATA)> <!-- Difficulty of the game -->
+	<!ELEMENT numPlayers (#PCDATA)> <!-- Number of players that can play -->
+	<!ENTITY Math "Mathematics">
+	<!ENTITY Geom "Geometry">
+]>
+
+<category>
+
+	<name></name>
+
+	<description></description>
+
+	<subject></subject>
+
+	<grade></grade>
+
+	<tags></tags>
+	
+	<cost></cost>
+
+	<equipment>
+		<eqName></eqName>
+		<addCost costAttr="additional"></addCost>
+	</equipment>
+
+	<!--<reviews></reviews> as there are no reviews and the attribute is REQUIRED, I comment this lines in the template-->
+
+	<picture></picture>
+
+	<url></url>
+
+	<duration></duration>
+
+	<difficulty></difficulty>
+
+	<numPlayers></numPlayers>
+	
+</category>

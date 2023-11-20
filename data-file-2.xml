@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE tabletop [
+<!ELEMENT tabletop (name, description, subject, grade, tags*, cost?,equipment+,reviews*,picture+,url*,duration?, difficulty?, numPlayers)*>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT description (#PCDATA)>
+	<!ELEMENT subject (#PCDATA)>
+	<!ELEMENT grade (#PCDATA)>
+	<!ELEMENT tags (#PCDATA)>
+	<!ELEMENT cost (#PCDATA)>
+	<!ELEMENT equipment (eqName, addCost)>
+		<!ELEMENT eqName (#PCDATA)>
+		<!ELEMENT addCost (#PCDATA)>
+			<!ATTLIST addCost costAttr (additional|included) #REQUIRED>
+	<!ELEMENT reviews (#PCDATA)>
+		<!ATTLIST reviews score (0|1|2|3|4|5) #REQUIRED>
+	<!ELEMENT picture (#PCDATA)>
+	<!ELEMENT url (#PCDATA)>
+	<!ELEMENT duration (#PCDATA)> <!-- Estimated time duration -->
+	<!ELEMENT difficulty (#PCDATA)> <!-- Difficulty of the game -->
+	<!ELEMENT numPlayers (#PCDATA)> <!-- Number of players that can play -->
+	<!ENTITY Math "Mathematics">
+	<!ENTITY Geom "Geometry">
+]>
+
+<tabletop>
+
+<!-- First -->
+	<name>Blackjack</name>
+
+	<description>This card game pits players against the dealer. The objective of the game is to add 21 with the cards in your hand, but be careful! If you exceed 21 you will lose. With this game you will practice your counting skills.</description>
+
+	<subject>&Math;</subject>
+
+	<grade>University 1st year</grade>
+
+	<tags></tags>
+	
+	<cost>AUD 15</cost>
+
+	<equipment>
+		<eqName>Cards</eqName>
+		<addCost costAttr="included">AUD 15</addCost>
+	</equipment>
+
+	<reviews score="4">I lost all my money, but I learnt a lot</reviews>
+
+	<picture>"images/Blackjack.jpg"</picture>
+
+	<url>https://en.wikipedia.org/wiki/Blackjack</url>
+
+	<duration>40 min</duration>
+
+	<difficulty>Low</difficulty>
+
+	<numPlayers>3-10</numPlayers>
+
+<!-- Second -->
+	<name>Hanabi</name>
+
+	<description>In this cooperative card game,players work together to create five fireworks displays, each in a different color and numbered 1-5. Players hold their cards outward for only others to see. The goal is to give limited clues about each other's cards so they can play the cards in the correct order. Communication, memory and strategy are key to success in Hanabi.</description>
+
+	<subject>Social</subject>
+
+	<grade>University 1st year</grade>
+
+	<tags></tags>
+	
+	<cost>AUD 45</cost>
+
+	<equipment>
+		<eqName>Cards</eqName>
+		<addCost costAttr="included">AUD 45</addCost>
+	</equipment>
+
+	<reviews score="5">Beautiful game and very funny.</reviews>
+
+	<picture>"images/Hanabi.jpg"</picture>
+
+	<url>https://en.wikipedia.org/wiki/Hanabi_(card_game)</url>
+
+	<duration>5 min</duration>
+
+	<difficulty>Medium</difficulty>
+
+	<numPlayers>3-8</numPlayers>
+
+<!-- Third -->
+	<name>Uno</name>
+
+	<description>This is a popular card game in which players compete to get rid of all their cards while applying specific rules. These rules contains addition operations. The player who plays his last card first wins. The game combines strategy, luck and quick decision making in a simple and entertaining format.</description>
+
+	<subject>&Math;</subject>
+
+	<grade>Grade 5</grade>
+
+	<tags></tags>
+	
+	<cost>AUD 25</cost>
+
+	<equipment>
+		<eqName>Cards</eqName>
+		<addCost costAttr="additional">AUD 0</addCost>
+	</equipment>
+
+	<reviews score="3">It is so easy that it starts to be a bit boring.</reviews>
+
+	<picture>"images/Uno.png"</picture>
+
+	<url>https://en.wikipedia.org/wiki/Uno_(card_game)</url>
+
+	<duration>5 min</duration>
+
+	<difficulty>Low</difficulty>
+
+	<numPlayers>2-6</numPlayers>
+			
+</tabletop>
